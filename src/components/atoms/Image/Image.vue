@@ -6,16 +6,12 @@
       'image-container--with-aspect': ratio !== 'auto',
       'image-container--rounded': rounded,
     }"
-    v-bind="href && { to: href }">
+    v-bind="href && { to: href }"
+  >
     <div v-if="renderFallbackSlot">
       <slot name="fallback"></slot>
     </div>
-    <a-image
-      v-else
-      :src="src"
-      :preview="preview"
-      :fallback="fallback"
-      @error="handleError">
+    <a-image v-else :src="src" :preview="preview" :fallback="fallback" @error="handleError">
       <template #placeholder>
         <a-image :src="placeholder" :preview="false" />
       </template>
@@ -30,18 +26,7 @@ import { defineComponent, PropType, ref } from 'vue';
 //#region internal
 //#endregion
 
-type TAspectRatio =
-  | '16/9'
-  | '9/16'
-  | '4/3'
-  | '3/4'
-  | '21/9'
-  | '9/21'
-  | '3/2'
-  | '2/3'
-  | '1/1'
-  | 'auto'
-  | string;
+type TAspectRatio = '16/9' | '9/16' | '4/3' | '3/4' | '21/9' | '9/21' | '3/2' | '2/3' | '1/1' | 'auto' | string;
 
 const DEFAULT_IMG = '/public/img/placeholder.png';
 
@@ -98,7 +83,6 @@ export default defineComponent({
 <style lang="less" scoped>
 @import '@styles/base/variables.less';
 @import '@styles/base/mixins.less';
-
 .image-container {
   width: 100%;
   height: 100%;

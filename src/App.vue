@@ -1,10 +1,7 @@
 <template>
   <div :class="{ 'spin-active': globalState.loading }">
     <a-config-provider :locale="locale">
-      <a-spin
-        size="large"
-        :spinning="globalState.loading"
-        class="global-spinner">
+      <a-spin size="large" :spinning="globalState.loading" class="global-spinner">
         <RouterView v-slot="{ Component }">
           <template v-if="Component">
             <Transition mode="out-in">
@@ -48,7 +45,6 @@ export default defineComponent({
 <style lang="less" scoped>
 @import '@styles/base/variables.less';
 @import '@styles/base/mixins.less';
-
 :deep(.ant-spin.global-spinner) {
   position: fixed;
   max-height: 100vh;
@@ -66,7 +62,6 @@ export default defineComponent({
 <style lang="less">
 @import '@styles/base/variables.less';
 @import '@styles/base/mixins.less';
-
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;

@@ -15,7 +15,5 @@ interface IConvertOptions {
  * @param {string | number} value - string | number
  * @param {IConvertOptions} defaultOptions - { tag: 'span', attrs: { class: 'text' } }
  */
-export const convertStringIntoVNode = (
-  value: string | number,
-  { tag, attrs }: IConvertOptions = defaultOptions
-): VNode => h(tag, attrs, value);
+export const convertStringIntoVNode = (value: string | number, { tag, attrs }: IConvertOptions = defaultOptions): VNode =>
+  h(tag, attrs, value);

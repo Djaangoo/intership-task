@@ -3,8 +3,6 @@ import vue from '@vitejs/plugin-vue';
 import eslintPlugin from '@nabla/vite-plugin-eslint';
 import { resolve } from 'path';
 
-import overrides from './overrides';
-
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -17,7 +15,6 @@ export default defineConfig({
       '@paths': resolve(__dirname, './src/paths/'),
       '@utils': resolve(__dirname, './src/utils/'),
       '@services': resolve(__dirname, './src/services/'),
-      '@shared': resolve(__dirname, './src/shared/'),
       '@router': resolve(__dirname, './src/router/'),
       '@dictionary': resolve(__dirname, './src/dictionary/'),
       '@plugins': resolve(__dirname, './src/plugins/'),
@@ -44,9 +41,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        modifyVars: {
-          ...overrides,
-        },
         javascriptEnabled: true,
       },
     },

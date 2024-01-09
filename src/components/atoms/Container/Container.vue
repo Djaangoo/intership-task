@@ -8,7 +8,8 @@
       md && `c-container--${md}-from-md`,
       lg && `c-container--${lg}-from-lg`,
       noPadding && 'c-container--no-padding',
-    ]">
+    ]"
+  >
     <slot></slot>
   </div>
 </template>
@@ -58,9 +59,7 @@ export default defineComponent({
       if (isString(props.size)) {
         classes.push(`c-container--${props.size}`);
       } else if (isObject(props.size)) {
-        Object.entries(props.size).forEach(([key, value]) =>
-          classes.push(`c-container--${value}-from-${key}`)
-        );
+        Object.entries(props.size).forEach(([key, value]) => classes.push(`c-container--${value}-from-${key}`));
       }
 
       return classes;
@@ -74,7 +73,6 @@ export default defineComponent({
 <style lang="less" scoped>
 @import '@styles/base/variables.less';
 @import '@styles/base/mixins.less';
-
 .c-container {
   margin: 0 auto;
   padding: 0 @padding-md;

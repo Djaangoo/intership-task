@@ -16,9 +16,7 @@ export const addScript = (src: string, attrs?: TAttrs) => {
     s.setAttribute('type', 'text/javascript');
   }
   if (attrs) {
-    Object.entries(attrs).forEach(([key, value]) =>
-      s.setAttribute(key, `${value}`)
-    );
+    Object.entries(attrs).forEach(([key, value]) => s.setAttribute(key, `${value}`));
   }
 
   document.body.appendChild(s);

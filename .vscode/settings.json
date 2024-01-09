@@ -1,19 +1,26 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "debug.internalConsoleOptions": "neverOpen",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "todo-tree.tree.disableCompactFolders": true,
-  "npm.enableTouchbar": true,
-  "prettier.endOfLine": "crlf",
   "files.associations": {
     "*.env.development": "env",
     "*.env.production": "env"
   },
-  "[vue]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "docwriter.style": "Auto-detect",
+  "json.schemas": [],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.prettier": "explicit"
   },
-  "vue3snippets.enable-compile-vue-file-on-did-save-code": false,
-  "files.eol": "\r\n",
-  "volar.completion.preferredAttrNameCase": "camel",
-  "volar.completion.preferredTagNameCase": "pascal"
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.eol": "\n",
+  "prettier.endOfLine": "lf",
+  "vue.splitEditors.layout.left": ["script", "scriptSetup"],
+  "vue.splitEditors.layout.right": ["template", "styles", "customBlocks"],
+  "vue.splitEditors.icon": true
 }

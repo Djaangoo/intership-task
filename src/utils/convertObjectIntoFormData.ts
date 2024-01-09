@@ -5,21 +5,14 @@
  * @param {string} [namespace] - This is the name of the object property.
  * @returns A function that takes an object and returns a FormData object.
  */
-export const convertObjectIntoFormData = (
-  obj: Record<string, any>,
-  form = new FormData(),
-  namespace?: string
-): FormData => {
+export const convertObjectIntoFormData = (obj: Record<string, any>, form = new FormData(), namespace?: string): FormData => {
   const fd = form || new FormData();
   let formKey;
 
   for (const property in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, property)) {
       if (namespace) {
-        formKey =
-          obj instanceof Array
-            ? `${namespace}[${property}]`
-            : `${namespace}.${property}`;
+        formKey = obj instanceof Array ? `${namespace}[${property}]` : `${namespace}.${property}`;
       } else {
         formKey = property;
       }

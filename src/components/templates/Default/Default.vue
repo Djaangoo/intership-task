@@ -8,9 +8,7 @@
         <a-col flex="auto">
           <a-menu theme="dark" mode="horizontal">
             <a-menu-item key="home" @click="handleHome">Home</a-menu-item>
-            <a-menu-item key="helloWorld" @click="handleHelloWorld">
-              Hello World
-            </a-menu-item>
+            <a-menu-item key="helloWorld" @click="handleHelloWorld"> Hello World </a-menu-item>
           </a-menu>
         </a-col>
       </a-row>
