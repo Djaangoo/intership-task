@@ -1,19 +1,18 @@
-import { concatURL } from '@utils/concatURL';
 import { basePath } from './base.path';
 
 export const ApiPath = {
-  geo: concatURL('/geo/1.0/', basePath.api),
+  geo: `${basePath.api}/geo/1.0/`,
   get direct() {
-    return concatURL('/direct', this.geo);
+    return `${this.geo}/direct`;
   },
   get zip() {
-    return concatURL('/zip', this.geo);
+    return `${this.geo}/zip`;
   },
   get reverse() {
-    return concatURL('/reverse', this.geo);
+    return `${this.geo}/reverse`;
   },
-  weather: concatURL('/data/2.5/weather', basePath.api),
-  airPollution: concatURL('data/2.5/air_pollution', basePath.api),
+  weather: `${basePath.api}/data/2.5/weather`,
+  airPollution: `${basePath.api}data/2.5/air_pollution`,
 };
 
 export default ApiPath;

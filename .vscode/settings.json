@@ -8,8 +8,6 @@
     "*.env.development": "env",
     "*.env.production": "env"
   },
-  "docwriter.style": "Auto-detect",
-  "json.schemas": [],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.prettier": "explicit"
@@ -18,8 +16,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "files.eol": "\n",
-  "prettier.endOfLine": "lf",
   "vue.splitEditors.layout.left": ["script", "scriptSetup"],
   "vue.splitEditors.layout.right": ["template", "styles", "customBlocks"],
   "vue.splitEditors.icon": true

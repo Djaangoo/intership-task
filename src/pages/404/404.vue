@@ -27,13 +27,10 @@ export default defineComponent({
   },
   data() {
     return {
-      home: pagePath.home.pathname,
+      home: pagePath.home,
     };
   },
 });
 </script>
 
-<style lang="less" scoped>
-@import '@styles/base/variables.less';
-@import '@styles/base/mixins.less';
-</style>
+<style lang="less" scoped></style>

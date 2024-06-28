@@ -4,7 +4,6 @@ module.exports = {
   semi: true,
   useTabs: false,
   bracketSpacing: true,
-  endOfLine: 'lf',
   singleQuote: true,
   printWidth: 140,
   overrides: [

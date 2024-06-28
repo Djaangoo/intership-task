@@ -3,9 +3,6 @@ import App from './App.vue';
 
 // @ts-ignore - build error
 
-// style
-import 'ant-design-vue/dist/antd.css';
-
 // Vue Packages
 import Antd from 'ant-design-vue';
 import { createPinia } from 'pinia';

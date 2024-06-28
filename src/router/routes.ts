@@ -2,7 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 import { pagePath } from '@paths/page.path';
 
 // Template
-import DefaultTemplate from '@components/templates/Default/Default.vue';
+import DefaultTemplate from '@components/Layout/Layout.vue';
 
 // Pages
 import Page404 from '@pages/404/404.vue';
@@ -12,21 +12,21 @@ import HelloWorld from '@pages/HelloWorld/HelloWorld.vue';
 const routes: RouteRecordRaw[] = [
   // outside
   {
-    path: pagePath.base.pathname,
+    path: pagePath.base,
     component: DefaultTemplate,
     children: [
       {
-        path: pagePath.base.pathname,
-        redirect: pagePath.helloWorld.pathname,
+        path: pagePath.base,
+        redirect: pagePath.helloWorld,
       },
       {
-        path: pagePath.home.pathname,
+        path: pagePath.home,
         name: 'home',
         component: Home,
       },
 
       {
-        path: pagePath.helloWorld.pathname,
+        path: pagePath.helloWorld,
         name: 'helloWorld',
         component: HelloWorld,
       },

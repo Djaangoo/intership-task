@@ -1,7 +1,7 @@
 <template>
-  <Container>
+  <div>
     <a-typography-title>Home!</a-typography-title>
-  </Container>
+  </div>
 </template>
 
 <script lang="ts">
@@ -11,13 +11,10 @@ import { useI18n } from 'vue-i18n';
 //#endregion
 //#region internal
 import { $http } from '@services/http.service';
-import Container from '@components/atoms/Container/Container.vue';
 import { basePath } from '@paths/base.path';
 //#endregion
-
 export default defineComponent({
   name: 'HomePage',
-  components: { Container },
   setup() {
     const { t } = useI18n();
     const city = 'London';
@@ -34,7 +31,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
-@import '@styles/base/variables.less';
-@import '@styles/base/mixins.less';
-</style>
+<style lang="less" scoped></style>

@@ -5,11 +5,7 @@
         <RouterView v-slot="{ Component }">
           <template v-if="Component">
             <Transition mode="out-in">
-              <KeepAlive>
-                <Suspense>
-                  <component :is="Component"></component>
-                </Suspense>
-              </KeepAlive>
+              <component :is="Component"></component>
             </Transition>
           </template>
         </RouterView>
@@ -43,8 +39,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-@import '@styles/base/variables.less';
-@import '@styles/base/mixins.less';
 :deep(.ant-spin.global-spinner) {
   position: fixed;
   max-height: 100vh;
@@ -60,8 +54,6 @@ export default defineComponent({
 </style>
 
 <style lang="less">
-@import '@styles/base/variables.less';
-@import '@styles/base/mixins.less';
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
