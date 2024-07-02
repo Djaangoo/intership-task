@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "7.0.1",
+    "@tanstack/vue-query": "^5.49.1",
     "@vueuse/core": "10.11.0",
     "ant-design-vue": "4.2.3",
     "axios": "1.7.2",
@@ -24,7 +25,6 @@
     "vue-advanced-cropper": "2.8.9",
     "vue-i18n": "9.13.1",
     "vue-plyr": "7.0.0",
-    "vue-query": "1.26.0",
     "vue-router": "4.4.0"
   },
   "devDependencies": {
