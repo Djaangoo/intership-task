@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-// @ts-ignore - build error
+import './styles/global.less';
 
 // Vue Packages
 import Antd from 'ant-design-vue';
